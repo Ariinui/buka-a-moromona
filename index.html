@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="tah">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Te Buka a Moromona - Tahitien">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Te Buka a Moromona</title>
+  <style>
+    body { font-family: "Georgia", serif; margin: 40px; line-height: 1.6; color: #333; background-color: #f8f9fa; }
+    h1, h2 { color: #1a3c6c; }
+    h1 { font-size: 2.2em; text-align: center; margin-bottom: 10px; }
+    h2 { font-size: 1.8em; margin-bottom: 15px; }
+    #toc { background-color: #fff; padding: 20px; border-radius: 8px; border: 1px solid #d1d8e0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 600px; margin: 20px auto; position: sticky; top: 20px; z-index: 100; }
+    #toc h1 { font-size: 1.6em; margin-bottom: 15px; text-align: left; }
+    #toc details { margin-bottom: 10px; }
+    #toc summary { cursor: pointer; padding: 8px; font-weight: 500; color: #2b6cb0; transition: color 0.3s ease; list-style: none; position: relative; }
+    #toc summary:hover { color: #1a4971; }
+    #toc summary::before { content: "\25B6"; display: inline-block; margin-right: 8px; font-size: 0.9em; transition: transform 0.3s ease; }
+    #toc details[open] summary::before { transform: rotate(90deg); }
+    #toc ul { list-style-type: none; padding-left: 20px; margin-top: 5px; }
+    #toc li { margin-bottom: 8px; }
+    #toc a { text-decoration: none; color: #2b6cb0; transition: color 0.3s ease; }
+    #toc a:hover { color: #1a4971; text-decoration: underline; }
+    .toc-item::before { content: "\2022"; color: #2b6cb0; margin-right: 8px; }
+    .verse { margin-bottom: 12px; font-size: 1em; }
+    .introduction { margin-bottom: 20px; font-style: italic; color: #555; }
+    .nav-container { margin-top: 20px; display: flex; justify-content: space-between; align-items: center; }
+    .nav-prev, .nav-toc, .nav-next { flex: 1; text-align: center; }
+    .nav-prev { text-align: left; }
+    .nav-next { text-align: right; }
+    .nav-prev a, .nav-toc a, .nav-next a { color: #2b6cb0; text-decoration: none; font-size: 1em; transition: color 0.3s ease; }
+    .nav-prev a:hover, .nav-toc a:hover, .nav-next a:hover { color: #1a4971; text-decoration: underline; }
+    @media (max-width: 600px) {
+      #toc { position: static; max-width: 100%; }
+      body { margin: 20px; }
+      h1 { font-size: 1.8em; }
+      h2 { font-size: 1.5em; }
+      #toc h1 { font-size: 1.4em; }
+      .nav-container { margin-top: 15px; flex-direction: column; gap: 10px; }
+      .nav-prev, .nav-toc, .nav-next { text-align: left; flex: none; }
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const details = document.querySelectorAll("#toc details");
+      details.forEach(detail => {
+        detail.addEventListener("toggle", function() {
+          if (this.open) {
+            details.forEach(other => {
+              if (other !== this) other.open = false;
+            });
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>TE BUKA A MOROMONA</h1>
+    <h2>Te Tahi Faahou Ite No Iesu Mesia</h2>
+  </header>
+  <nav id="toc" aria-label="Tableau des matières">
+    <h1>Tableau des Matières</h1>
+    <details aria-label="Te Buka Mātāmua a Nephi">
+      <summary>Te Buka Mātāmua a Nephi</summary>
+      <ul>
+        <li class="toc-item"><a href="chapters/1_ne_chapitre_1.html">Chapitre 1</a></li>
+        <li class="toc-item"><a href="chapters/1_ne_chapitre_2.html">Chapitre 2</a></li>
+        <li class="toc-item"><a href="chapters/1_ne_chapitre_3.html">Chapitre 3</a></li>
+        <li class="toc-item"><a href="chapters/1_ne_chapitre_4.html">Chapitre 4</a></li>
+        <li class="toc-item"><a href="chapters/1_ne_chapitre_5.html">Chapitre 5</a></li>
+        <li class="toc-item"><a href="chapters/1_ne_chapitre_6.html">Chapitre 6</a></li>
+        <li class="toc-item"><a href="chapters/1_ne_chapitre_7.html">Chapitre 7</a></li>
+        <li class="toc-item"><a href="chapters/1_ne_chapitre_8.html">Chapitre 8</a></li>
+        <li class="toc-item"><a href="chapters/1_ne_chapitre_9.html">Chapitre 9</a></li>
+        <li class="toc-item"><a href="chapters/1_ne_chapitre_10.html">Chapitre 10</a></li>
+        <li class="toc-item"><a href="chapters/1_ne_chapitre_11.html">Chapitre 11</a></li>
+        <li class="toc-item"><a href="chapters/1_ne_chapitre_12.html">Chapitre 12</a></li>
+        <li class="toc-item"><a href="chapters/1_ne_chapitre_13.html">Chapitre 13</a></li>
+        <li class="toc-item"><a href="chapters/1_ne_chapitre_14.html">Chapitre 14</a></li>
+        <li class="toc-item"><a href="chapters/1_ne_chapitre_15.html">Chapitre 15</a></li>
+        <li class="toc-item"><a href="chapters/1_ne_chapitre_16.html">Chapitre 16</a></li>
+        <li class="toc-item"><a href="chapters/1_ne_chapitre_17.html">Chapitre 17</a></li>
+        <li class="toc-item"><a href="chapters/1_ne_chapitre_18.html">Chapitre 18</a></li>
+        <li class="toc-item"><a href="chapters/1_ne_chapitre_19.html">Chapitre 19</a></li>
+        <li class="toc-item"><a href="chapters/1_ne_chapitre_20.html">Chapitre 20</a></li>
+        <li class="toc-item"><a href="chapters/1_ne_chapitre_21.html">Chapitre 21</a></li>
+        <li class="toc-item"><a href="chapters/1_ne_chapitre_22.html">Chapitre 22</a></li>
+      </ul>
+    </details>
+    <details aria-label="Te Buka Piti a Nephi">
+      <summary>Te Buka Piti a Nephi</summary>
+      <ul>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_1.html">Chapitre 1</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_2.html">Chapitre 2</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_3.html">Chapitre 3</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_4.html">Chapitre 4</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_5.html">Chapitre 5</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_6.html">Chapitre 6</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_7.html">Chapitre 7</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_8.html">Chapitre 8</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_9.html">Chapitre 9</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_10.html">Chapitre 10</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_11.html">Chapitre 11</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_12.html">Chapitre 12</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_13.html">Chapitre 13</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_14.html">Chapitre 14</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_15.html">Chapitre 15</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_16.html">Chapitre 16</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_17.html">Chapitre 17</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_18.html">Chapitre 18</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_19.html">Chapitre 19</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_20.html">Chapitre 20</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_21.html">Chapitre 21</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_22.html">Chapitre 22</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_23.html">Chapitre 23</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_24.html">Chapitre 24</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_25.html">Chapitre 25</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_26.html">Chapitre 26</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_27.html">Chapitre 27</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_28.html">Chapitre 28</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_29.html">Chapitre 29</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_30.html">Chapitre 30</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_31.html">Chapitre 31</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_32.html">Chapitre 32</a></li>
+        <li class="toc-item"><a href="chapters/2_ne_chapitre_33.html">Chapitre 33</a></li>
+      </ul>
+    </details>
+    <details aria-label="Te Buka a IakobaTe Teina o Nephi">
+      <summary>Te Buka a IakobaTe Teina o Nephi</summary>
+      <ul>
+        <li class="toc-item"><a href="chapters/jacob_chapitre_1.html">Chapitre 1</a></li>
+        <li class="toc-item"><a href="chapters/jacob_chapitre_2.html">Chapitre 2</a></li>
+        <li class="toc-item"><a href="chapters/jacob_chapitre_3.html">Chapitre 3</a></li>
+        <li class="toc-item"><a href="chapters/jacob_chapitre_4.html">Chapitre 4</a></li>
+        <li class="toc-item"><a href="chapters/jacob_chapitre_5.html">Chapitre 5</a></li>
+        <li class="toc-item"><a href="chapters/jacob_chapitre_6.html">Chapitre 6</a></li>
+        <li class="toc-item"><a href="chapters/jacob_chapitre_7.html">Chapitre 7</a></li>
+      </ul>
+    </details>
+    <details aria-label="Te Buka a Enosa">
+      <summary>Te Buka a Enosa</summary>
+      <ul>
+        <li class="toc-item"><a href="chapters/enos_chapitre_1.html">Chapitre 1</a></li>
+      </ul>
+    </details>
+    <details aria-label="Te Buka a Iaroma">
+      <summary>Te Buka a Iaroma</summary>
+      <ul>
+        <li class="toc-item"><a href="chapters/jarom_chapitre_1.html">Chapitre 1</a></li>
+      </ul>
+    </details>
+    <details aria-label="Te Buka a Omoni">
+      <summary>Te Buka a Omoni</summary>
+      <ul>
+        <li class="toc-item"><a href="chapters/omni_chapitre_1.html">Chapitre 1</a></li>
+        <li class="toc-item"><a href="chapters/w_of_m_chapitre_1.html">Chapitre 1</a></li>
+      </ul>
+    </details>
+    <details aria-label="Te Buka a Mosia">
+      <summary>Te Buka a Mosia</summary>
+      <ul>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_1.html">Chapitre 1</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_2.html">Chapitre 2</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_3.html">Chapitre 3</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_4.html">Chapitre 4</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_5.html">Chapitre 5</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_6.html">Chapitre 6</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_7.html">Chapitre 7</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_8.html">Chapitre 8</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_9.html">Chapitre 9</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_10.html">Chapitre 10</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_11.html">Chapitre 11</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_12.html">Chapitre 12</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_13.html">Chapitre 13</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_14.html">Chapitre 14</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_15.html">Chapitre 15</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_16.html">Chapitre 16</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_17.html">Chapitre 17</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_18.html">Chapitre 18</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_19.html">Chapitre 19</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_20.html">Chapitre 20</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_21.html">Chapitre 21</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_22.html">Chapitre 22</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_23.html">Chapitre 23</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_24.html">Chapitre 24</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_25.html">Chapitre 25</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_26.html">Chapitre 26</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_27.html">Chapitre 27</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_28.html">Chapitre 28</a></li>
+        <li class="toc-item"><a href="chapters/mosiah_chapitre_29.html">Chapitre 29</a></li>
+      </ul>
+    </details>
+    <details aria-label="Te Buka a Alamate Tamaiti a Alama">
+      <summary>Te Buka a Alamate Tamaiti a Alama</summary>
+      <ul>
+        <li class="toc-item"><a href="chapters/alma_chapitre_1.html">Chapitre 1</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_2.html">Chapitre 2</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_3.html">Chapitre 3</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_4.html">Chapitre 4</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_5.html">Chapitre 5</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_6.html">Chapitre 6</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_7.html">Chapitre 7</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_8.html">Chapitre 8</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_9.html">Chapitre 9</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_10.html">Chapitre 10</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_11.html">Chapitre 11</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_12.html">Chapitre 12</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_13.html">Chapitre 13</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_14.html">Chapitre 14</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_15.html">Chapitre 15</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_16.html">Chapitre 16</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_17.html">Chapitre 17</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_18.html">Chapitre 18</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_19.html">Chapitre 19</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_20.html">Chapitre 20</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_21.html">Chapitre 21</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_22.html">Chapitre 22</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_23.html">Chapitre 23</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_24.html">Chapitre 24</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_25.html">Chapitre 25</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_26.html">Chapitre 26</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_27.html">Chapitre 27</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_28.html">Chapitre 28</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_29.html">Chapitre 29</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_30.html">Chapitre 30</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_31.html">Chapitre 31</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_32.html">Chapitre 32</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_33.html">Chapitre 33</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_34.html">Chapitre 34</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_35.html">Chapitre 35</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_36.html">Chapitre 36</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_37.html">Chapitre 37</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_38.html">Chapitre 38</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_39.html">Chapitre 39</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_40.html">Chapitre 40</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_41.html">Chapitre 41</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_42.html">Chapitre 42</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_43.html">Chapitre 43</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_44.html">Chapitre 44</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_45.html">Chapitre 45</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_46.html">Chapitre 46</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_47.html">Chapitre 47</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_48.html">Chapitre 48</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_49.html">Chapitre 49</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_50.html">Chapitre 50</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_51.html">Chapitre 51</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_52.html">Chapitre 52</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_53.html">Chapitre 53</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_54.html">Chapitre 54</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_55.html">Chapitre 55</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_56.html">Chapitre 56</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_57.html">Chapitre 57</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_58.html">Chapitre 58</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_59.html">Chapitre 59</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_60.html">Chapitre 60</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_61.html">Chapitre 61</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_62.html">Chapitre 62</a></li>
+        <li class="toc-item"><a href="chapters/alma_chapitre_63.html">Chapitre 63</a></li>
+      </ul>
+    </details>
+    <details aria-label="Te Buka a Helamana">
+      <summary>Te Buka a Helamana</summary>
+      <ul>
+        <li class="toc-item"><a href="chapters/hel_chapitre_1.html">Chapitre 1</a></li>
+        <li class="toc-item"><a href="chapters/hel_chapitre_2.html">Chapitre 2</a></li>
+        <li class="toc-item"><a href="chapters/hel_chapitre_3.html">Chapitre 3</a></li>
+        <li class="toc-item"><a href="chapters/hel_chapitre_4.html">Chapitre 4</a></li>
+        <li class="toc-item"><a href="chapters/hel_chapitre_5.html">Chapitre 5</a></li>
+        <li class="toc-item"><a href="chapters/hel_chapitre_6.html">Chapitre 6</a></li>
+        <li class="toc-item"><a href="chapters/hel_chapitre_7.html">Chapitre 7</a></li>
+        <li class="toc-item"><a href="chapters/hel_chapitre_8.html">Chapitre 8</a></li>
+        <li class="toc-item"><a href="chapters/hel_chapitre_9.html">Chapitre 9</a></li>
+        <li class="toc-item"><a href="chapters/hel_chapitre_10.html">Chapitre 10</a></li>
+        <li class="toc-item"><a href="chapters/hel_chapitre_11.html">Chapitre 11</a></li>
+        <li class="toc-item"><a href="chapters/hel_chapitre_12.html">Chapitre 12</a></li>
+        <li class="toc-item"><a href="chapters/hel_chapitre_13.html">Chapitre 13</a></li>
+        <li class="toc-item"><a href="chapters/hel_chapitre_14.html">Chapitre 14</a></li>
+        <li class="toc-item"><a href="chapters/hel_chapitre_15.html">Chapitre 15</a></li>
+        <li class="toc-item"><a href="chapters/hel_chapitre_16.html">Chapitre 16</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_1.html">Chapitre 1</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_2.html">Chapitre 2</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_3.html">Chapitre 3</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_4.html">Chapitre 4</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_5.html">Chapitre 5</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_6.html">Chapitre 6</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_7.html">Chapitre 7</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_8.html">Chapitre 8</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_9.html">Chapitre 9</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_10.html">Chapitre 10</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_11.html">Chapitre 11</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_12.html">Chapitre 12</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_13.html">Chapitre 13</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_14.html">Chapitre 14</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_15.html">Chapitre 15</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_16.html">Chapitre 16</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_17.html">Chapitre 17</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_18.html">Chapitre 18</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_19.html">Chapitre 19</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_20.html">Chapitre 20</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_21.html">Chapitre 21</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_22.html">Chapitre 22</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_23.html">Chapitre 23</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_24.html">Chapitre 24</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_25.html">Chapitre 25</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_26.html">Chapitre 26</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_27.html">Chapitre 27</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_28.html">Chapitre 28</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_29.html">Chapitre 29</a></li>
+        <li class="toc-item"><a href="chapters/3_ne_chapitre_30.html">Chapitre 30</a></li>
+        <li class="toc-item"><a href="chapters/4_ne_chapitre_1.html">Chapitre 1</a></li>
+      </ul>
+    </details>
+    <details aria-label="Te Buka a Moromona">
+      <summary>Te Buka a Moromona</summary>
+      <ul>
+        <li class="toc-item"><a href="chapters/morm_chapitre_1.html">Chapitre 1</a></li>
+        <li class="toc-item"><a href="chapters/morm_chapitre_2.html">Chapitre 2</a></li>
+        <li class="toc-item"><a href="chapters/morm_chapitre_3.html">Chapitre 3</a></li>
+        <li class="toc-item"><a href="chapters/morm_chapitre_4.html">Chapitre 4</a></li>
+        <li class="toc-item"><a href="chapters/morm_chapitre_5.html">Chapitre 5</a></li>
+        <li class="toc-item"><a href="chapters/morm_chapitre_6.html">Chapitre 6</a></li>
+        <li class="toc-item"><a href="chapters/morm_chapitre_7.html">Chapitre 7</a></li>
+        <li class="toc-item"><a href="chapters/morm_chapitre_8.html">Chapitre 8</a></li>
+        <li class="toc-item"><a href="chapters/morm_chapitre_9.html">Chapitre 9</a></li>
+      </ul>
+    </details>
+    <details aria-label="Te Buka a Etera">
+      <summary>Te Buka a Etera</summary>
+      <ul>
+        <li class="toc-item"><a href="chapters/ether_chapitre_1.html">Chapitre 1</a></li>
+        <li class="toc-item"><a href="chapters/ether_chapitre_2.html">Chapitre 2</a></li>
+        <li class="toc-item"><a href="chapters/ether_chapitre_3.html">Chapitre 3</a></li>
+        <li class="toc-item"><a href="chapters/ether_chapitre_4.html">Chapitre 4</a></li>
+        <li class="toc-item"><a href="chapters/ether_chapitre_5.html">Chapitre 5</a></li>
+        <li class="toc-item"><a href="chapters/ether_chapitre_6.html">Chapitre 6</a></li>
+        <li class="toc-item"><a href="chapters/ether_chapitre_7.html">Chapitre 7</a></li>
+        <li class="toc-item"><a href="chapters/ether_chapitre_8.html">Chapitre 8</a></li>
+        <li class="toc-item"><a href="chapters/ether_chapitre_9.html">Chapitre 9</a></li>
+        <li class="toc-item"><a href="chapters/ether_chapitre_10.html">Chapitre 10</a></li>
+        <li class="toc-item"><a href="chapters/ether_chapitre_11.html">Chapitre 11</a></li>
+        <li class="toc-item"><a href="chapters/ether_chapitre_12.html">Chapitre 12</a></li>
+        <li class="toc-item"><a href="chapters/ether_chapitre_13.html">Chapitre 13</a></li>
+        <li class="toc-item"><a href="chapters/ether_chapitre_14.html">Chapitre 14</a></li>
+        <li class="toc-item"><a href="chapters/ether_chapitre_15.html">Chapitre 15</a></li>
+      </ul>
+    </details>
+    <details aria-label="Te Buka a Moroni">
+      <summary>Te Buka a Moroni</summary>
+      <ul>
+        <li class="toc-item"><a href="chapters/moro_chapitre_1.html">Chapitre 1</a></li>
+        <li class="toc-item"><a href="chapters/moro_chapitre_2.html">Chapitre 2</a></li>
+        <li class="toc-item"><a href="chapters/moro_chapitre_3.html">Chapitre 3</a></li>
+        <li class="toc-item"><a href="chapters/moro_chapitre_4.html">Chapitre 4</a></li>
+        <li class="toc-item"><a href="chapters/moro_chapitre_5.html">Chapitre 5</a></li>
+        <li class="toc-item"><a href="chapters/moro_chapitre_6.html">Chapitre 6</a></li>
+        <li class="toc-item"><a href="chapters/moro_chapitre_7.html">Chapitre 7</a></li>
+        <li class="toc-item"><a href="chapters/moro_chapitre_8.html">Chapitre 8</a></li>
+        <li class="toc-item"><a href="chapters/moro_chapitre_9.html">Chapitre 9</a></li>
+        <li class="toc-item"><a href="chapters/moro_chapitre_10.html">Chapitre 10</a></li>
+      </ul>
+    </details>
+  </nav>
+</body>
+</html>
