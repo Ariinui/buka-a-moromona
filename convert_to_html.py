@@ -73,60 +73,59 @@ for book in books:
             'title': f"{book['name']} - Chapitre {chapter['number']}"
         })
 
-# Style CSS commun
+# Style CSS commun (chaque ligne entourée de guillemets)
 css = [
-    '    body { font-family: "Georgia", serif; margin: 40px; line-height: 1.6; color: #333; background-color: #f8f9fa; }',
-    '    h1, h2 { color: #1a3c6c; }',
-    '    h1 { font-size: 2.2em; text-align: center; margin-bottom: 10px; }',
-    '    h2 { font-size: 1.8em; margin-bottom: 15px; }',
-    '    #toc { background-color: #fff; padding: 20px; border-radius: 8px; border: 1px solid #d1d8e0;',
-    '      box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 600px; margin: 20px auto; position: sticky; top: 20px; z-index: 100; }',
-    '    #toc h1 { font-size: 1.6em; margin-bottom: 15px; text-align: left; }',
-    '    #toc details { margin-bottom: 10px; }',
-    '    #toc summary { cursor: pointer; padding: 8px; font-weight: 500; color: #2b6cb0; transition: color 0.3s ease; list-style: none; position: relative; }',
-    '    #toc summary:hover { color: #1a4971; }',
-    '    #toc summary::before { content: "\\25B6"; display: inline-block; margin-right: 8px; font-size: 0.9em; transition: transform 0.3s ease; }',
-    '    #toc details[open] summary::before { transform: rotate(90deg); }',
-    '    #toc ul { list-style-type: none; padding-left: 20px; margin-top: 5px; }',
-    '    #toc li { margin-bottom: 8px; }',
-    '    #toc a { text-decoration: none; color: #2b6cb0; transition: color 0.3s ease; }',
-    '    #toc a:hover { color: #1a4971; text-decoration: underline; }',
-    '    .toc-item::before { content: "\\2022"; color: #2b6cb0; margin-right: 8px; }',
-    '    .verse { margin-bottom: 12px; font-size: 1em; }',
-    '    .introduction { margin-bottom: 20px; font-style: italic; color: #555; }',
-    '    .nav-container { margin-top: 20px; display: flex; justify-content: space-between; align-items: center; }',
-    '    .nav-prev, .nav-toc, .nav-next { flex: 1; text-align: center; }',
-    '    .nav-prev { text-align: left; }',
-    '    .nav-next { text-align: right; }',
-    '    .nav-prev a, .nav-toc a, .nav-next a { color: #2b6cb0; text-decoration: none; font-size: 1em; transition: color 0.3s ease; }',
-    '    .nav-prev a:hover, .nav-toc a:hover, .nav-next a:hover { color: #1a4971; text-decoration: underline; }',
-    '    @media (max-width: 600px) {',
-    '      #toc { position: static; max-width: 100%; }',
-    '      body { margin: 20px; }',
-    '      h1 { font-size: 1.8em; }',
-    '      h2 { font-size: 1.5em; }',
-    '      #toc h1 { font-size: 1.4em; }',
-    '      .nav-container { margin-top: 15px; flex-direction: column; gap: 10px; }',
-    '      .nav-prev, .nav-toc, .nav-next { text-align: left; flex: none; }',
-    '    }'
+    'body { font-family: "Georgia", serif; margin: 40px; line-height: 1.6; color: #333; background-color: #f8f9fa; }',
+    'h1, h2 { color: #1a3c6c; }',
+    'h1 { font-size: 2.2em; text-align: center; margin-bottom: 10px; }',
+    'h2 { font-size: 1.8em; margin-bottom: 15px; }',
+    '#toc { background-color: #fff; padding: 20px; border-radius: 8px; border: 1px solid #d1d8e0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 600px; margin: 20px auto; position: sticky; top: 20px; z-index: 100; }',
+    '#toc h1 { font-size: 1.6em; margin-bottom: 15px; text-align: left; }',
+    '#toc details { margin-bottom: 10px; }',
+    '#toc summary { cursor: pointer; padding: 8px; font-weight: 500; color: #2b6cb0; transition: color 0.3s ease; list-style: none; position: relative; }',
+    '#toc summary:hover { color: #1a4971; }',
+    '#toc summary::before { content: "\\25B6"; display: inline-block; margin-right: 8px; font-size: 0.9em; transition: transform 0.3s ease; }',
+    '#toc details[open] summary::before { transform: rotate(90deg); }',
+    '#toc ul { list-style-type: none; padding-left: 20px; margin-top: 5px; }',
+    '#toc li { margin-bottom: 8px; }',
+    '#toc a { text-decoration: none; color: #2b6cb0; transition: color 0.3s ease; }',
+    '#toc a:hover { color: #1a4971; text-decoration: underline; }',
+    '.toc-item::before { content: "\\2022"; color: #2b6cb0; margin-right: 8px; }',
+    '.verse { margin-bottom: 12px; font-size: 1em; }',
+    '.introduction { margin-bottom: 20px; font-style: italic; color: #555; }',
+    '.nav-container { margin-top: 20px; display: flex; justify-content: space-between; align-items: center; }',
+    '.nav-prev, .nav-toc, .nav-next { flex: 1; text-align: center; }',
+    '.nav-prev { text-align: left; }',
+    '.nav-next { text-align: right; }',
+    '.nav-prev a, .nav-toc a, .nav-next a { color: #2b6cb0; text-decoration: none; font-size: 1em; transition: color 0.3s ease; }',
+    '.nav-prev a:hover, .nav-toc a:hover, .nav-next a:hover { color: #1a4971; text-decoration: underline; }',
+    '@media (max-width: 600px) {',
+    '  #toc { position: static; max-width: 100%; }',
+    '  body { margin: 20px; }',
+    '  h1 { font-size: 1.8em; }',
+    '  h2 { font-size: 1.5em; }',
+    '  #toc h1 { font-size: 1.4em; }',
+    '  .nav-container { margin-top: 15px; flex-direction: column; gap: 10px; }',
+    '  .nav-prev, .nav-toc, .nav-next { text-align: left; flex: none; }',
+    '}'
 ]
 
 # JavaScript commun
 js = [
-    '  <script>',
-    '    document.addEventListener("DOMContentLoaded", function() {',
-    '      const details = document.querySelectorAll("#toc details");',
-    '      details.forEach(detail => {',
-    '        detail.addEventListener("toggle", function() {',
-    '          if (this.open) {',
-    '            details.forEach(other => {',
-    '              if (other !== this) other.open = false;',
-    '            });',
-    '          }',
-    '        });',
+    '<script>',
+    '  document.addEventListener("DOMContentLoaded", function() {',
+    '    const details = document.querySelectorAll("#toc details");',
+    '    details.forEach(detail => {',
+    '      detail.addEventListener("toggle", function() {',
+    '        if (this.open) {',
+    '          details.forEach(other => {',
+    '            if (other !== this) other.open = false;',
+    '          });',
+    '        }',
     '      });',
     '    });',
-    '  </script>'
+    '  });',
+    '</script>'
 ]
 
 # Générer le fichier principal (index.html) - uniquement la table des matières
@@ -204,10 +203,9 @@ if introduction:
         '    </div>',
         '  </section>',
         '  <div class="nav-container">',
-        '    <div class="nav-prev"></div>',  # Espace vide pour "Page précédente"
+        '    <div class="nav-prev"></div>',
         '    <div class="nav-toc"><a href="../index.html" aria-label="Retour à la table des matières">Retour à la table des matières</a></div>'
     ])
-    # Ajouter "Page suivante" si applicable
     if len(page_sequence) > 1:
         intro_content.append(f'    <div class="nav-next"><a href="{page_sequence[1]["file"]}" aria-label="Page suivante">Page suivante</a></div>')
     else:
@@ -224,7 +222,6 @@ if introduction:
 # Générer un fichier HTML pour chaque chapitre
 for book_idx, book in enumerate(books):
     for chap_idx, chapter in enumerate(book['chapters']):
-        # Calculer l'index dans page_sequence
         page_index = (sum(len(b['chapters']) for b in books[:book_idx]) + chap_idx + 1) if introduction else (sum(len(b['chapters']) for b in books[:book_idx]) + chap_idx)
         
         chapter_content = [
@@ -252,7 +249,6 @@ for book_idx, book in enumerate(books):
             '  </section>',
             '  <div class="nav-container">'
         ])
-        # Ajouter les liens de navigation
         prev_link = page_sequence[page_index - 1]['file'] if page_index > 0 else None
         next_link = page_sequence[page_index + 1]['file'] if page_index < len(page_sequence) - 1 else None
         if prev_link:
