@@ -8,4 +8,14 @@ document.addEventListener("DOMContentLoaded", function() {
       if (!isOpen) content.classList.add("show");
     });
   });
+  const navLinks = document.querySelectorAll("nav a");
+  navLinks.forEach(link => {
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+      document.body.style.opacity = "0";
+      setTimeout(() => { window.location.href = this.href; }, 300);
+    });
+  });
+  document.body.style.transition = "opacity 0.3s ease";
+  document.body.style.opacity = "1";
 });
